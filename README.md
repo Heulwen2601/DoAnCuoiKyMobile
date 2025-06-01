@@ -15,7 +15,7 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.duthu.net/S52200127/doancuoikymobile_nhombrotherhood.git
+git remote add origin [https://gitlab.duthu.net/S52200127/doancuoikymobile_nhombrotherhood.git](https://github.com/Heulwen2601/DoAnCuoiKyMobile.git)
 git branch -M main
 git push -uf origin main
 ```
