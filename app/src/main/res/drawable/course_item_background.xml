@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+        <!-- White background for the course item -->
+        <solid android:color="#FFFFFF" />
+
+        <!-- Rounded corners with a radius of 8dp -->
+        <corners android:radius="8dp" />
+
+        <!-- Shadow effect for elevation -->
+        <padding
+            android:left="8dp"
+            android:top="8dp"
+            android:right="8dp"
+            android:bottom="8dp" />
+    </shape>
+
+</selector>

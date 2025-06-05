@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header with Back Button -->
+
+
+    <!-- Topic Details -->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:background="@null"
+        android:contentDescription="Back"
+        android:src="@drawable/back_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <TextView
+        android:id="@+id/topicTitle"
+        android:layout_width="308dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="5dp"
+        android:text="Topic Title"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/back_button"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintTop_toTopOf="@+id/back_button" />
+
+
+    <!-- Add New Vocabulary Button -->
+
+    <!-- Vocabulary List -->
+
+    <ImageButton
+        android:id="@+id/btn_addNewVocabulary"
+        android:layout_width="62dp"
+        android:layout_height="45dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="12dp"
+        android:background="@null"
+        android:contentDescription="@string/account_button"
+        android:src="@drawable/ic_add2"
+        app:layout_constraintBottom_toTopOf="@+id/vocabularyList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topicTitle"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Spinner
+        android:id="@+id/spinnerViewVocab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:padding="16dp"
+        android:text="Tùy chọn"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_button" />
+
+    <!-- Vocabulary List -->
+
+    <!-- New Vocabulary Input Form (Initially Invisible) -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vocabularyList"
+        android:layout_width="351dp"
+        android:layout_height="449dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerViewVocab"
+        tools:listitem="@layout/item_vocabulary" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vocabularyListFavourite"
+        android:layout_width="352dp"
+        android:layout_height="449dp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerViewVocab"
+        tools:listitem="@layout/item_vocabulary" />
+
+    <LinearLayout
+        android:id="@+id/vocabularyInputForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vocabularyList"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp">
+
+        <EditText
+            android:id="@+id/englishWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập từ tiếng Anh"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/vietnameseWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập nghĩa tiếng Việt"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="Hủy" />
+
+            <Button
+                android:id="@+id/saveVocabularyButton"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Lưu" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

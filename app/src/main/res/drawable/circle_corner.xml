@@ -1,0 +1,10 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"> <!-- Đặt hình dạng là oval -->
+
+    <solid android:color="@color/white"/> <!-- Màu nền -->
+
+    <!-- Nếu muốn thêm viền -->
+    <stroke
+        android:width="2dp"
+        android:color="@android:color/darker_gray" /> <!-- Viền xám -->
+</shape>

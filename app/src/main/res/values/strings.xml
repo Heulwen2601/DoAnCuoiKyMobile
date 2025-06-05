@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">DoAnCuoiKy_Mobile</string>
+    <string-array name="filter_options">
+        <item>Danh sách folder</item>
+        <item>Danh sách topic</item>
+    </string-array>
+    <string name="home_button">Open Home</string>
+    <string name="course_button">Open Course</string>
+    <string name="lib_button">Open Library</string>
+    <string name="account_button">Open Account</string>
+    <string name="search_button">Open Search</string>
+    <string name="volume_button">Open Volume</string>
+    <string name="my_web_client_id">499321183234–22jh3std107bmqokmc12ir5oq2fj1qgc.apps.googleusercontent.com</string>
+
+
+</resources>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:ignore="ExtraText">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/flashcard_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#BBDEFB"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- FrameLayout chứa 2 mặt của flashcard -->
+        <FrameLayout
+            android:id="@+id/card_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Mặt trước của flashcard -->
+            <LinearLayout
+                android:id="@+id/front_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:visibility="visible"> <!-- Hiển thị mặc định -->
+
+                <!-- Nút phát âm -->
+                <ImageView
+                    android:id="@+id/word_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image" />
+
+                <ImageButton
+                    android:id="@+id/btnPlaySound"
+                    android:layout_width="41dp"
+                    android:layout_height="35dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:contentDescription="Play Sound"
+                    android:src="@drawable/ic_sound"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <!-- Tên từ -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/word_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cow"
+                        android:textColor="#000000"
+                        android:gravity="center"
+                        android:textSize="36sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Mặt sau của flashcard -->
+            <LinearLayout
+                android:id="@+id/back_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:visibility="gone"> <!-- Hiển thị mặc định -->
+
+                <!-- Hình ảnh -->
+                <ImageView
+                    android:id="@+id/word_image2"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image"
+                    android:layout_marginEnd="16dp" />
+
+                <!-- Nút phát âm -->
+                <ImageButton
+                    android:id="@+id/btnPlaySound2"
+                    android:layout_width="41dp"
+                    android:layout_height="35dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:contentDescription="Play Sound"
+                    android:src="@drawable/ic_sound"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <!-- Tên từ -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/word_definition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="con bò"
+                        android:textColor="#000000"
+                        android:gravity="center"
+                        android:textSize="36sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

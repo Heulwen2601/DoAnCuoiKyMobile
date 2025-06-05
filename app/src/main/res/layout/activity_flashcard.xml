@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+    <!-- Topic Details -->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="75dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="12dp"
+        android:background="@null"
+        android:contentDescription="Back"
+        android:src="@drawable/back_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/topicTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Topic Title"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/back_button"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintTop_toTopOf="@+id/back_button" />
+
+    <!-- Add FlashCard Button -->
+    <ImageButton
+        android:id="@+id/btn_addNewFlashCard"
+        android:layout_width="65dp"
+        android:layout_height="53dp"
+        android:layout_gravity="end"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="@string/account_button"
+        android:src="@drawable/ic_add2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.712"
+        app:layout_constraintStart_toEndOf="@+id/topicTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <!-- RecyclerView for Flashcards -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="389dp"
+        android:layout_height="465dp"
+        android:layout_marginTop="28dp"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topicTitle"
+        tools:listitem="@layout/item_flashcard" />
+
+
+
+    <!-- Button Container -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E1F0FF"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <!-- Other buttons here -->
+    </LinearLayout>
+
+    <!-- Add FlashCard Dialog -->
+    <LinearLayout
+        android:id="@+id/dialog_addFlashCard"
+        android:layout_width="337dp"
+        android:layout_height="314dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/buttonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+        app:layout_constraintVertical_bias="0.72">
+
+        <EditText
+            android:id="@+id/englishWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Nhập từ tiếng Anh"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/vietnameseWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:hint="Nhập nghĩa tiếng Việt"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <ImageButton
+            android:id="@+id/btn_uploadImage"
+            android:layout_width="55dp"
+            android:layout_height="56dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/img_add"
+            android:text="Upload Image" />
+
+        <LinearLayout
+            android:layout_width="307dp"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:text="Hủy" />
+
+            <Button
+                android:id="@+id/btn_saveFlashCard"
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:text="Lưu" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/uploadedImageUrl"
+            android:layout_width="75dp"
+            android:layout_height="15dp"
+            android:text="Tải hình ảnh lên"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

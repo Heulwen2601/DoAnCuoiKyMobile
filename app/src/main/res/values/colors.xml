@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="default_option">#C5CEFF</color>
+
+    <color name="default_background">#FFFFFF</color>
+    <color name="selected_background">#E0F7FA</color>
+    <color name="correct_background">#33A438</color>
+    <color name="wrong_background">#BD4138</color>
+    <color name="text_color">#000000</color>
+    <!-- Màu tím đậm, có thể thay đổi -->
+
+    <!-- Màu phụ của ứng dụng -->
+    <color name="colorAccent">#03DAC5</color> <!-- Màu xanh ngọc, có thể thay đổi -->
+</resources>
